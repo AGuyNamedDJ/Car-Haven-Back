@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "nodemon ./db/seed.js",
     "seed:dev": "nodemon ./db/seed.js",
-    "start": "node index.js",
-    "start:dev": "nodemon index.js",
-    "start-seed": "node db/seed.js && node index.js",
-    "seed-and-start": "node ./db/seed.js && node index.js" 
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
+    "start-seed": "node db/seed.js && node server.js",
+    "seed-and-start": "node ./db/seed.js && node server.js" 
   },
   "repository": {
     "type": "git",
