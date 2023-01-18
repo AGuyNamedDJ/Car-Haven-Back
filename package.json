@@ -1,0 +1,37 @@
+{
+  "name": "car-haven-back",
+  "version": "1.0.0",
+  "description": "A Back-End for a car dealership that showcases a range of vehicles for sale. The website features filtering and sorting, vehicle information, &amp; a contact page for customers to get in touch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "nodemon ./db/seed.js",
+    "seed:dev": "nodemon ./db/seed.js",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "start-seed": "node db/seed.js && node index.js",
+    "seed-and-start": "node ./db/seed.js && node index.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DJRobertson95/Car-Haven-Back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DJRobertson95/Car-Haven-Back/issues"
+  },
+  "homepage": "/",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
