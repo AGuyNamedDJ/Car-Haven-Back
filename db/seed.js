@@ -120,12 +120,12 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 "carId" SERIAL PRIMARY KEY,
                 "manufacturerId" INTEGER REFERENCES manufacturer("manufacturerId"),
                 make VARCHAR(25) NOT NULL,
-                model VARCHAR(25) NOT NULL,
+                model VARCHAR(50) NOT NULL,
                 year INTEGER NOT NULL,
                 price NUMERIC(8,0) NOT NULL,
                 description TEXT NOT NULL,
                 mileage NUMERIC(6,0),
-                "bodyType" VARCHAR(10) NOT NULL,
+                "bodyType" VARCHAR(20) NOT NULL,
                 vin VARCHAR(50) UNIQUE NOT NULL,
                 "exteriorColor" VARCHAR(50) NOT NULL,
                 "interiorColor" VARCHAR(50) NOT NULL,
@@ -143,12 +143,12 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 "carId" SERIAL PRIMARY KEY,
                 "manufacturerId" INTEGER REFERENCES manufacturer("manufacturerId"),
                 make VARCHAR(25) NOT NULL,
-                model VARCHAR(25) NOT NULL,
+                model VARCHAR(50) NOT NULL,
                 year INTEGER NOT NULL,
                 price NUMERIC(8,0) NOT NULL,
                 description TEXT NOT NULL,
                 mileage NUMERIC(6,0),
-                "bodyType" VARCHAR(10) NOT NULL,
+                "bodyType" VARCHAR(20) NOT NULL,
                 vin VARCHAR(50) UNIQUE NOT NULL,
                 "exteriorColor" VARCHAR(50) NOT NULL,
                 "interiorColor" VARCHAR(50) NOT NULL,
@@ -166,12 +166,12 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 "carId" SERIAL PRIMARY KEY,
                 "manufacturerId" INTEGER REFERENCES manufacturer("manufacturerId"),
                 make VARCHAR(25) NOT NULL,
-                model VARCHAR(25) NOT NULL,
+                model VARCHAR(50) NOT NULL,
                 year INTEGER NOT NULL,
                 price NUMERIC(8,0) NOT NULL,
                 description TEXT NOT NULL,
                 mileage NUMERIC(6,0),
-                "bodyType" VARCHAR(10) NOT NULL,
+                "bodyType" VARCHAR(20) NOT NULL,
                 vin VARCHAR(50) UNIQUE NOT NULL,
                 "exteriorColor" VARCHAR(50) NOT NULL,
                 "interiorColor" VARCHAR(50) NOT NULL,
@@ -189,12 +189,12 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 "carId" SERIAL PRIMARY KEY,
                 "manufacturerId" INTEGER REFERENCES manufacturer("manufacturerId"),
                 make VARCHAR(25) NOT NULL,
-                model VARCHAR(25) NOT NULL,
+                model VARCHAR(50) NOT NULL,
                 year INTEGER NOT NULL,
                 price NUMERIC(8,0) NOT NULL,
                 description TEXT NOT NULL,
                 mileage NUMERIC(6,0),
-                "bodyType" VARCHAR(10) NOT NULL,
+                "bodyType" VARCHAR(20) NOT NULL,
                 vin VARCHAR(50) UNIQUE NOT NULL,
                 "exteriorColor" VARCHAR(50) NOT NULL,
                 "interiorColor" VARCHAR(50) NOT NULL,
@@ -212,12 +212,12 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 "carId" SERIAL PRIMARY KEY,
                 "manufacturerId" INTEGER REFERENCES manufacturer("manufacturerId"),
                 make VARCHAR(25) NOT NULL,
-                model VARCHAR(25) NOT NULL,
+                model VARCHAR(50) NOT NULL,
                 year INTEGER NOT NULL,
                 price NUMERIC(8,0) NOT NULL,
                 description TEXT NOT NULL,
                 mileage NUMERIC(6,0),
-                "bodyType" VARCHAR(10) NOT NULL,
+                "bodyType" VARCHAR(20) NOT NULL,
                 vin VARCHAR(50) UNIQUE NOT NULL,
                 "exteriorColor" VARCHAR(50) NOT NULL,
                 "interiorColor" VARCHAR(50) NOT NULL,
@@ -372,6 +372,72 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
         }
     };
 
+    // Create Initial Koenigsegg
+    async function createInitialKoenigsegg(){
+        console.log("Creating a Koenigsegg:...");
+        try {
+            await createKoenigsegg({
+                make: "Koenigsegg",
+                manufacturerId: 4,
+                model: "Regera",
+                year: 2016,
+                price: 4170000,
+                description: "Example of 2016 Koenigsegg Regera",
+                mileage: 26,
+                bodyType: "Coupe",
+                vin: "K3N1G5E8G3R4A5",
+                exteriorColor: "Orange",
+                interiorColor: "Black",
+                doors: 2,
+                imageOne: "exampleURL",
+                imageTwo: "exampleURL",
+                imageThree: "exampleURL",
+                imageFour: "exampleURL",
+                imageFive: "exampleURL",
+                imageSix: "exampleURL",
+                imageSeven: "exampleURL",
+                imageEight: "exampleURL"
+            });
+            console.log("Finished creating Koenigsegg!");
+        } catch (error) {
+            console.log("Error creating Koenigsegg!");
+            console.log(error);
+        }
+    };
+
+    // Create Initial Lamborghini 
+    async function createInitialLamborghini(){
+        console.log("Creating a Lamborghini:...");
+        try {
+            await createLamborghini({
+            make: "Lamborghini",
+            manufacturerId: 5,
+            model: "Aventador SV",
+            year: 2015,
+            price: 548584,
+            description: "Example of 2015 Lamborghini Aventador SV",
+            mileage: 4655,
+            bodyType: "Convertible",
+            vin: "D8EK2YF82MDUR8AJ3",
+            exteriorColor: "Black",
+            interiorColor: "Black",
+            doors: 2,
+            imageOne: "exampleURL",
+            imageTwo: "exampleURL",
+            imageThree: "exampleURL",
+            imageFour: "exampleURL",
+            imageFive: "exampleURL",
+            imageSix: "exampleURL",
+            imageSeven: "exampleURL",
+            imageEight: "exampleURL"
+        });
+            console.log("Finished creating Lamborghini!");
+        } catch (error) {
+            console.log("Error creating Lamborghini!");
+            console.log(error);
+        }
+    };
+
     // Rebuild DB
     async function rebuildDB() {
         try {
@@ -434,7 +500,6 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 console.log("Calling all BentleyPrice...");
                 const bentleyPrice = await getAllBentleyByPrice(219499);
                 console.log("Results", bentleyPrice);
-
 
                 // GetByMileage
                 console.log("Calling all BentleyMileage...");
@@ -555,6 +620,106 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 console.log("Calling all FerrariInteriorColor...");
                 const ferrariInteriorColor = await getAllFerrariByInteriorColor("Black");
                 console.log("Results", ferrariInteriorColor);
+
+            // Koenigsegg
+            console.log("Calling all Koenigsegg...");
+            const koenigsegg = await getAllKoenigsegg();
+            console.log("Results", koenigsegg);
+
+                // GetByID
+                console.log("Calling all KoenigseggId...");
+                const koenigseggId = await getAllKoenigseggById(1);
+                console.log("Results", koenigseggId);
+
+                // GetByMake
+                console.log("Calling all KoenigseggMake...");
+                const koenigseggMake = await getAllKoenigseggByMake("Koenigsegg");
+                console.log("Results", koenigseggMake);
+
+                // GetByModel
+                console.log("Calling all KoenigseggModel...");
+                const koenigseggModel = await getAllKoenigseggByModel("Regera");
+                console.log("Results", koenigseggModel);
+
+                // GetByYear
+                console.log("Calling all KoenigseggYear...");
+                const koenigseggYear = await getAllKoenigseggByYear(2016);
+                console.log("Results", koenigseggYear);
+
+                // GetByPrice
+                console.log("Calling all KoenigseggPrice...");
+                const koenigseggPrice = await getAllKoenigseggByPrice(4170000);
+                console.log("Results", koenigseggPrice);
+
+                // GetByMileage
+                console.log("Calling all KoenigseggMileage...");
+                const koenigseggMileage = await getAllKoenigseggByMileage(26);
+                console.log("Results", koenigseggMileage);
+
+                // GetByBodyType
+                console.log("Calling all KoenigseggBodyType...");
+                const koenigseggBodyType = await getAllKoenigseggByBodyType("Coupe");
+                console.log("Results", koenigseggBodyType);
+
+                // GetByExteriorColor
+                console.log("Calling all KoenigseggExteriorColor...");
+                const koenigseggExteriorColor = await getAllKoenigseggByExteriorColor("Orange");
+                console.log("Results", koenigseggExteriorColor);
+
+                // GetByInteriorColor
+                console.log("Calling all KoenigseggInteriorColor...");
+                const koenigseggInteriorColor = await getAllKoenigseggByInteriorColor("Black");
+                console.log("Results", koenigseggInteriorColor);
+
+            // Lamborghini
+            console.log("Calling all Lamborghini...");
+            const lamborghini = await getAllLamborghini();
+            console.log("Results", lamborghini);
+
+                // GetByID
+                console.log("Calling all LamborghiniId...");
+                const lamborghiniId = await getAllLamborghiniById(1);
+                console.log("Results", lamborghiniId);
+
+                // GetByMake
+                console.log("Calling all LamborghiniMake...");
+                const lamborghiniMake = await getAllLamborghiniByMake("Lamborghini");
+                console.log("Results", lamborghiniMake);
+
+                // GetByModel
+                console.log("Calling all LamborghiniModel...");
+                const lamborghiniModel = await getAllLamborghiniByModel("Aventador SV");
+                console.log("Results", lamborghiniModel);
+
+                // GetByYear
+                console.log("Calling all LamborghiniYear...");
+                const lamborghiniYear = await getAllLamborghiniByYear(2015);
+                console.log("Results", lamborghiniYear);
+
+                // GetByPrice
+                console.log("Calling all LamborghiniPrice...");
+                const lamborghiniPrice = await getAllLamborghiniByPrice(548584);
+                console.log("Results", lamborghiniPrice);
+
+                // GetByMileage
+                console.log("Calling all LamborghiniMileage...");
+                const lamborghiniMileage = await getAllLamborghiniByMileage(4655);
+                console.log("Results", lamborghiniMileage);
+
+                // GetByBodyType
+                console.log("Calling all LamborghiniBodyType...");
+                const lamborghiniBodyType = await getAllLamborghiniByBodyType("Convertible");
+                console.log("Results", lamborghiniBodyType);
+
+                // GetByExteriorColor
+                console.log("Calling all LamborghiniExteriorColor...");
+                const lamborghiniExteriorColor = await getAllLamborghiniByExteriorColor("Black");
+                console.log("Results", lamborghiniExteriorColor);
+
+                // GetByInteriorColor
+                console.log("Calling all LamborghiniInteriorColor...");
+                const lamborghiniInteriorColor = await getAllLamborghiniByInteriorColor("Black");
+                console.log("Results", lamborghiniInteriorColor);
 
 
             console.log("Finished database tests.");
