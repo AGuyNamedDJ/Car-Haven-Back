@@ -5,6 +5,7 @@ const { client } = require('./index');
 // Page Imports
 const { createManufacturer, getAllManufacturer } = require("./manufacturer");
 const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, getAllBentleyByModel, getAllBentleyByYear, getAllBentleyByPrice, getAllBentleyByMileage, getAllBentleyByBodyType, getAllBentleyByExteriorColor, getAllBentleyByInteriorColor } = require("./bentley");
+const { createBugatti, getAllBugatti, getAllBugattiById, getAllBugattiByMake, getAllBugattiByModel, getAllBugattiByYear, getAllBugattiByPrice, getAllBugattiByMileage, getAllBugattiByBodyType, getAllBugattiByExteriorColor, getAllBugattiByInteriorColor } = require("./bugatti");
 
 
 // Step 2: User Methods
@@ -81,7 +82,7 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
                 "imageTwo" VARCHAR(500) UNIQUE,
                 "imageThree" VARCHAR(500) UNIQUE,
                 "imageFour" VARCHAR(500) UNIQUE,
-                "imageFIve" VARCHAR(500) UNIQUE,
+                "imageFive" VARCHAR(500) UNIQUE,
                 "imageSix" VARCHAR(500) UNIQUE,
                 "imageSeven" VARCHAR(500) UNIQUE,
                 "imageEight" VARCHAR(500) UNIQUE
@@ -104,7 +105,7 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
                 "imageTwo" VARCHAR(500) UNIQUE,
                 "imageThree" VARCHAR(500) UNIQUE,
                 "imageFour" VARCHAR(500) UNIQUE,
-                "imageFIve" VARCHAR(500) UNIQUE,
+                "imageFive" VARCHAR(500) UNIQUE,
                 "imageSix" VARCHAR(500) UNIQUE,
                 "imageSeven" VARCHAR(500) UNIQUE,
                 "imageEight" VARCHAR(500) UNIQUE
@@ -127,7 +128,7 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
                 "imageTwo" VARCHAR(500) UNIQUE,
                 "imageThree" VARCHAR(500) UNIQUE,
                 "imageFour" VARCHAR(500) UNIQUE,
-                "imageFIve" VARCHAR(500) UNIQUE,
+                "imageFive" VARCHAR(500) UNIQUE,
                 "imageSix" VARCHAR(500) UNIQUE,
                 "imageSeven" VARCHAR(500) UNIQUE,
                 "imageEight" VARCHAR(500) UNIQUE
@@ -150,7 +151,7 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
                 "imageTwo" VARCHAR(500) UNIQUE,
                 "imageThree" VARCHAR(500) UNIQUE,
                 "imageFour" VARCHAR(500) UNIQUE,
-                "imageFIve" VARCHAR(500) UNIQUE,
+                "imageFive" VARCHAR(500) UNIQUE,
                 "imageSix" VARCHAR(500) UNIQUE,
                 "imageSeven" VARCHAR(500) UNIQUE,
                 "imageEight" VARCHAR(500) UNIQUE
@@ -173,7 +174,7 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
                 "imageTwo" VARCHAR(500) UNIQUE,
                 "imageThree" VARCHAR(500) UNIQUE,
                 "imageFour" VARCHAR(500) UNIQUE,
-                "imageFIve" VARCHAR(500) UNIQUE,
+                "imageFive" VARCHAR(500) UNIQUE,
                 "imageSix" VARCHAR(500) UNIQUE,
                 "imageSeven" VARCHAR(500) UNIQUE,
                 "imageEight" VARCHAR(500) UNIQUE
@@ -196,7 +197,7 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
                 "imageTwo" VARCHAR(500) UNIQUE,
                 "imageThree" VARCHAR(500) UNIQUE,
                 "imageFour" VARCHAR(500) UNIQUE,
-                "imageFIve" VARCHAR(500) UNIQUE,
+                "imageFive" VARCHAR(500) UNIQUE,
                 "imageSix" VARCHAR(500) UNIQUE,
                 "imageSeven" VARCHAR(500) UNIQUE,
                 "imageEight" VARCHAR(500) UNIQUE
@@ -219,7 +220,7 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
                 "imageTwo" VARCHAR(500) UNIQUE,
                 "imageThree" VARCHAR(500) UNIQUE,
                 "imageFour" VARCHAR(500) UNIQUE,
-                "imageFIve" VARCHAR(500) UNIQUE,
+                "imageFive" VARCHAR(500) UNIQUE,
                 "imageSix" VARCHAR(500) UNIQUE,
                 "imageSeven" VARCHAR(500) UNIQUE,
                 "imageEight" VARCHAR(500) UNIQUE
@@ -237,6 +238,27 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
         try {
             await createManufacturer({
                 manufacturerName: "Bentley"
+            });
+            await createManufacturer({
+                manufacturerName: "Bugatti"
+            });
+            await createManufacturer({
+                manufacturerName: "Ferrari"
+            });
+            await createManufacturer({
+                manufacturerName: "Koenigsegg"
+            });
+            await createManufacturer({
+                manufacturerName: "Lamborghini"
+            });
+            await createManufacturer({
+                manufacturerName: "McLaren"
+            });
+            await createManufacturer({
+                manufacturerName: "Porsche"
+            });
+            await createManufacturer({
+                manufacturerName: "Rolls Royce"
             });
             console.log("Finished creating Manufacturer!")
         } catch (error) {
@@ -278,6 +300,39 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
         }
     };
 
+    // Create Initial Bugatti
+    async function createInitialBugatti(){
+        console.log("Creating a Bugatti:...");
+        try {
+            await createBugatti({
+                make: "Bugatti",
+                manufacturerId: 2,
+                model: "Chiron",
+                year: 2022,
+                price: 2900000,
+                description: "Example of 2022 Bugatti Chiron",
+                mileage: 500,
+                bodyType: "Coupe",
+                vin: "DFK3JF82MDUR8AJ2",
+                exteriorColor: "Blue",
+                interiorColor: "Black",
+                doors: 2,
+                imageOne: "exampleURL",
+                imageTwo: "exampleURL",
+                imageThree: "exampleURL",
+                imageFour: "exampleURL",
+                imageFive: "exampleURL",
+                imageSix: "exampleURL",
+                imageSeven: "exampleURL",
+                imageEight: "exampleURL"
+                });
+            console.log("Finished creating Bugatti!");
+        } catch (error) {
+            console.log("Error creating Bugatti!");
+            console.log(error);
+        }
+    };
+
     // Rebuild DB
     async function rebuildDB() {
         try {
@@ -287,6 +342,7 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
             await createTables();
             await createInitialManufacturer();
             await createInitialBentley();
+            await createInitialBugatti();
 
         } catch (error) {
             console.log("Error during rebuildDB!")
@@ -354,6 +410,57 @@ const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, ge
                 console.log("Calling all BentleyInteriorColor...");
                 const bentleyInteriorColor = await getAllBentleyByInteriorColor("Brown");
                 console.log("Results", bentleyInteriorColor);
+
+            // Bugatti
+            console.log("Calling all Bugatti...");
+            const bugatti = await getAllBugatti();
+            console.log("Results", bugatti);
+
+                // GetByID
+                console.log("Calling all BugattiId...");
+                const bugattiId = await getAllBugattiById(1);
+                console.log("Results", bugattiId);
+
+                // GetByMake
+                console.log("Calling all BugattiMake...");
+                const bugattiMake = await getAllBugattiByMake("Bugatti");
+                console.log("Results", bugattiMake);
+
+                // GetByModel
+                console.log("Calling all BugattiModel...");
+                const bugattiModel = await getAllBugattiByModel("Chiron");
+                console.log("Results", bugattiModel);
+
+                // GetByYear
+                console.log("Calling all BugattiYear...");
+                const bugattiYear = await getAllBugattiByYear(2022);
+                console.log("Results", bugattiYear);
+
+                // GetByPrice
+                console.log("Calling all BugattiPrice...");
+                const bugattiPrice = await getAllBugattiByPrice(2900000);
+                console.log("Results", bugattiPrice);
+
+
+                // GetByMileage
+                console.log("Calling all BugattiMileage...");
+                const bugattiMileage = await getAllBugattiByMileage(500);
+                console.log("Results", bugattiMileage);
+
+                // GetByBodyType
+                console.log("Calling all BugattiBodyType...");
+                const bugattiBodyType = await getAllBugattiByBodyType("Coupe");
+                console.log("Results", bugattiBodyType);
+
+                // GetByExteriorColor
+                console.log("Calling all BugattiExteriorColor...");
+                const bugattiExteriorColor = await getAllBugattiByExteriorColor("Blue");
+                console.log("Results", bugattiExteriorColor);
+
+                // GetByInteriorColor
+                console.log("Calling all BugattiInteriorColor...");
+                const bugattiInteriorColor = await getAllBugattiByInteriorColor("Black");
+                console.log("Results", bugattiInteriorColor);
 
 
             console.log("Finished database tests.");
