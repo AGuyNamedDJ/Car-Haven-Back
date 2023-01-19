@@ -4,7 +4,7 @@ const { client } = require('./index');
 
 // Page Imports
 const { createManufacturer, getAllManufacturer } = require("./manufacturer");
-const { createBentley, getAllBentley } = require("./bentley");
+const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, getAllBentleyByModel, getAllBentleyByYear, getAllBentleyByPrice, getAllBentleyByMileage, getAllBentleyByBodyType, getAllBentleyByExteriorColor, getAllBentleyByInteriorColor } = require("./bentley");
 
 
 // Step 2: User Methods
@@ -253,7 +253,7 @@ const { createBentley, getAllBentley } = require("./bentley");
                 make: "Bentley",
                 manufacturerId: 1,
                 model: "Continental GT",
-                year: 2021,
+                year: 2022,
                 price: 219499,
                 description: "Example of 2022 Bentley CGT",
                 mileage: 1432,
@@ -304,9 +304,56 @@ const { createBentley, getAllBentley } = require("./bentley");
             const manufacturer = await getAllManufacturer();
             console.log("Results", manufacturer);
 
+            // Bentley
             console.log("Calling all Bentley...");
             const bentley = await getAllBentley();
             console.log("Results", bentley);
+
+                // GetByID
+                console.log("Calling all BentleyId...");
+                const bentleyId = await getAllBentleyById(1);
+                console.log("Results", bentleyId);
+
+                // GetByMake
+                console.log("Calling all BentleyMake...");
+                const bentleyMake = await getAllBentleyByMake("Bentley");
+                console.log("Results", bentleyMake);
+
+                // GetByModel
+                console.log("Calling all BentleyModel...");
+                const bentleyModel = await getAllBentleyByModel("Continental GT");
+                console.log("Results", bentleyModel);
+
+                // GetByYear
+                console.log("Calling all BentleyYear...");
+                const bentleyYear = await getAllBentleyByYear(2022);
+                console.log("Results", bentleyYear);
+
+                // GetByPrice
+                console.log("Calling all BentleyPrice...");
+                const bentleyPrice = await getAllBentleyByPrice(219499);
+                console.log("Results", bentleyPrice);
+
+
+                // GetByMileage
+                console.log("Calling all BentleyMileage...");
+                const bentleyMileage = await getAllBentleyByMileage(1432);
+                console.log("Results", bentleyMileage);
+
+                // GetByBodyType
+                console.log("Calling all BentleyBodyType...");
+                const bentleyBodyType = await getAllBentleyByBodyType("Coupe");
+                console.log("Results", bentleyBodyType);
+
+                // GetByExteriorColor
+                console.log("Calling all BentleyExteriorColor...");
+                const bentleyExteriorColor = await getAllBentleyByExteriorColor("White");
+                console.log("Results", bentleyExteriorColor);
+
+                // GetByInteriorColor
+                console.log("Calling all BentleyInteriorColor...");
+                const bentleyInteriorColor = await getAllBentleyByInteriorColor("Brown");
+                console.log("Results", bentleyInteriorColor);
 
 
             console.log("Finished database tests.");
