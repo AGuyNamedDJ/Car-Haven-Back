@@ -6,6 +6,12 @@ const { client } = require('./index');
 const { createManufacturer, getAllManufacturer } = require("./manufacturer");
 const { createBentley, getAllBentley, getAllBentleyById, getAllBentleyByMake, getAllBentleyByModel, getAllBentleyByYear, getAllBentleyByPrice, getAllBentleyByMileage, getAllBentleyByBodyType, getAllBentleyByExteriorColor, getAllBentleyByInteriorColor } = require("./bentley");
 const { createBugatti, getAllBugatti, getAllBugattiById, getAllBugattiByMake, getAllBugattiByModel, getAllBugattiByYear, getAllBugattiByPrice, getAllBugattiByMileage, getAllBugattiByBodyType, getAllBugattiByExteriorColor, getAllBugattiByInteriorColor } = require("./bugatti");
+const { createFerrari, getAllFerrari, getAllFerrariById, getAllFerrariByMake, getAllFerrariByModel, getAllFerrariByYear, getAllFerrariByPrice, getAllFerrariByMileage, getAllFerrariByBodyType, getAllFerrariByExteriorColor, getAllFerrariByInteriorColor } = require("./ferrari");
+const { createKoenigsegg, getAllKoenigsegg, getAllKoenigseggById, getAllKoenigseggByMake, getAllKoenigseggByModel, getAllKoenigseggByYear, getAllKoenigseggByPrice, getAllKoenigseggByMileage, getAllKoenigseggByBodyType, getAllKoenigseggByExteriorColor, getAllKoenigseggByInteriorColor } = require("./koenigsegg");
+const { createLamborghini, getAllLamborghini, getAllLamborghiniById, getAllLamborghiniByMake, getAllLamborghiniByModel, getAllLamborghiniByYear, getAllLamborghiniByPrice, getAllLamborghiniByMileage, getAllLamborghiniByBodyType, getAllLamborghiniByExteriorColor, getAllLamborghiniByInteriorColor } = require("./lamborghini");
+const { createMcLaren, getAllMcLaren, getAllMcLarenById, getAllMcLarenByMake, getAllMcLarenByModel, getAllMcLarenByYear, getAllMcLarenByPrice, getAllMcLarenByMileage, getAllMcLarenByBodyType, getAllMcLarenByExteriorColor, getAllMcLarenByInteriorColor } = require("./mclaren");
+const { createPorsche, getAllPorsche, getAllPorscheById, getAllPorscheByMake, getAllPorscheByModel, getAllPorscheByYear, getAllPorscheByPrice, getAllPorscheByMileage, getAllPorscheByBodyType, getAllPorscheByExteriorColor, getAllPorscheByInteriorColor } = require("./porsche");
+const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoyceByMake, getAllRollsRoyceByModel, getAllRollsRoyceByYear, getAllRollsRoyceByPrice, getAllRollsRoyceByMileage, getAllRollsRoyceByBodyType, getAllRollsRoyceByExteriorColor, getAllRollsRoyceByInteriorColor } = require("./rollsroyce");
 
 
 // Step 2: User Methods
@@ -333,6 +339,39 @@ const { createBugatti, getAllBugatti, getAllBugattiById, getAllBugattiByMake, ge
         }
     };
 
+    // Create Initial Ferrari
+    async function createInitialFerrari(){
+        console.log("Creating a Bugatti:...");
+        try {
+            await createFerrari({
+                make: "Ferrari",
+                manufacturerId: 3,
+                model: "458",
+                year: 2014,
+                price: 198500,
+                description: "Example of 2022 Ferrari 458",
+                mileage: 14508,
+                bodyType: "Coupe",
+                vin: "D8EK2YF82MDUR8AJ2",
+                exteriorColor: "Red",
+                interiorColor: "Black",
+                doors: 2,
+                imageOne: "exampleURL",
+                imageTwo: "exampleURL",
+                imageThree: "exampleURL",
+                imageFour: "exampleURL",
+                imageFive: "exampleURL",
+                imageSix: "exampleURL",
+                imageSeven: "exampleURL",
+                imageEight: "exampleURL"
+            });
+            console.log("Finished creating Ferrari!");
+        } catch (error) {
+            console.log("Error creating Ferrari!");
+            console.log(error);
+        }
+    };
+
     // Rebuild DB
     async function rebuildDB() {
         try {
@@ -343,6 +382,12 @@ const { createBugatti, getAllBugatti, getAllBugattiById, getAllBugattiByMake, ge
             await createInitialManufacturer();
             await createInitialBentley();
             await createInitialBugatti();
+            await createInitialFerrari();
+            await createInitialKoenigsegg();
+            await createInitialLamborghini();
+            await createInitialMcLaren();
+            await createInitialPorsche();
+            await createInitialRollsRoyce();
 
         } catch (error) {
             console.log("Error during rebuildDB!")
@@ -441,7 +486,6 @@ const { createBugatti, getAllBugatti, getAllBugattiById, getAllBugattiByMake, ge
                 const bugattiPrice = await getAllBugattiByPrice(2900000);
                 console.log("Results", bugattiPrice);
 
-
                 // GetByMileage
                 console.log("Calling all BugattiMileage...");
                 const bugattiMileage = await getAllBugattiByMileage(500);
@@ -461,6 +505,56 @@ const { createBugatti, getAllBugatti, getAllBugattiById, getAllBugattiByMake, ge
                 console.log("Calling all BugattiInteriorColor...");
                 const bugattiInteriorColor = await getAllBugattiByInteriorColor("Black");
                 console.log("Results", bugattiInteriorColor);
+
+            // Ferrari
+            console.log("Calling all Ferrari...");
+            const ferrari = await getAllFerrari();
+            console.log("Results", ferrari);
+
+                // GetByID
+                console.log("Calling all FerrariId...");
+                const ferrariId = await getAllFerrariById(1);
+                console.log("Results", ferrariId);
+
+                // GetByMake
+                console.log("Calling all FerrariMake...");
+                const ferrariMake = await getAllFerrariByMake("Ferrari");
+                console.log("Results", ferrariMake);
+
+                // GetByModel
+                console.log("Calling all FerrariModel...");
+                const ferrariModel = await getAllFerrariByModel("458");
+                console.log("Results", ferrariModel);
+
+                // GetByYear
+                console.log("Calling all FerrariYear...");
+                const ferrariYear = await getAllFerrariByYear(2014);
+                console.log("Results", ferrariYear);
+
+                // GetByPrice
+                console.log("Calling all FerrariPrice...");
+                const ferrariPrice = await getAllFerrariByPrice(198500);
+                console.log("Results", ferrariPrice);
+
+                // GetByMileage
+                console.log("Calling all FerrariMileage...");
+                const ferrariMileage = await getAllFerrariByMileage(14508);
+                console.log("Results", ferrariMileage);
+
+                // GetByBodyType
+                console.log("Calling all FerrariBodyType...");
+                const ferrariBodyType = await getAllFerrariByBodyType("Coupe");
+                console.log("Results", ferrariBodyType);
+
+                // GetByExteriorColor
+                console.log("Calling all FerrariExteriorColor...");
+                const ferrariExteriorColor = await getAllFerrariByExteriorColor("Red");
+                console.log("Results", ferrariExteriorColor);
+
+                // GetByInteriorColor
+                console.log("Calling all FerrariInteriorColor...");
+                const ferrariInteriorColor = await getAllFerrariByInteriorColor("Black");
+                console.log("Results", ferrariInteriorColor);
 
 
             console.log("Finished database tests.");

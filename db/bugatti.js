@@ -1,7 +1,7 @@
 // Requires
 const { client } = require("./index") 
 
-// Bugatti cardId = 1;
+// Bugatti cardId = 2;
 
 // getAllBugatti
 async function getAllBugatti () {
