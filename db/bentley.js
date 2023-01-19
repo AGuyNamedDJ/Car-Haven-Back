@@ -166,15 +166,15 @@ async function getAllBentleyByInteriorColor (interiorColor) {
 // createBentley
 async function createBentley(bentleyData) {
     try {
-        const { carId, make, model, year, price, description, mileage, bodyType, vin, exteriorColor, interiorColor, doors, imageOne, imageTwo, imageThree, imageFour, imageFive, imageSix, imageSeven, imageEight } = breakfastData;
-        if (!carId) {
-            throw new Error('Breakfast must have a valid department Id')
+        const { manufacturerId, make, model, year, price, description, mileage, bodyType, vin, exteriorColor, interiorColor, doors, imageOne, imageTwo, imageThree, imageFour, imageFive, imageSix, imageSeven, imageEight } = bentleyData;
+        if (!manufacturerId) {
+            throw new Error('Bentley must have a valid car Id')
         }
         const { rows } = await client.query(`
-            INSERT INTO breakfast("breakfastName", "departmentId", instructions, description, ingredients, serving_size, time_to_prepare, image)
-            VALUES($1, $2, $3, $4, $5, $6, $7, $8)
+            INSERT INTO bentley("manufacturerId", "make", model, year, price, description, mileage, "bodyType", vin, "exteriorColor", "interiorColor", doors, "imageOne", "imageTwo", "imageThree", "imageFour", "imageFive", "imageSix", "imageSeven", "imageEight")
+            VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20)
             RETURNING *;
-        `, [carId, make, model, year, price, description, mileage, bodyType, vin, exteriorColor, interiorColor, doors, imageOne, imageTwo, imageThree, imageFour, imageFive, imageSix, imageSeven, imageEight]);
+        `, [manufacturerId, make, model, year, price, description, mileage, bodyType, vin, exteriorColor, interiorColor, doors, imageOne, imageTwo, imageThree, imageFour, imageFive, imageSix, imageSeven, imageEight]);
 
         return rows[0];
     } catch (error) {
