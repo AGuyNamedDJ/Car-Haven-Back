@@ -299,7 +299,7 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 imageSeven: "exampleURL",
                 imageEight: "exampleURL"
             });
-            console.log("Finished creating Bentley!");
+            console.log("Finished creating Bentley.");
         } catch (error) {
             console.log("Error creating Bentley!");
             console.log(error);
@@ -332,7 +332,7 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 imageSeven: "exampleURL",
                 imageEight: "exampleURL"
                 });
-            console.log("Finished creating Bugatti!");
+            console.log("Finished creating Bugatti.");
         } catch (error) {
             console.log("Error creating Bugatti!");
             console.log(error);
@@ -365,7 +365,7 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 imageSeven: "exampleURL",
                 imageEight: "exampleURL"
             });
-            console.log("Finished creating Ferrari!");
+            console.log("Finished creating Ferrari.");
         } catch (error) {
             console.log("Error creating Ferrari!");
             console.log(error);
@@ -398,7 +398,7 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 imageSeven: "exampleURL",
                 imageEight: "exampleURL"
             });
-            console.log("Finished creating Koenigsegg!");
+            console.log("Finished creating Koenigsegg.");
         } catch (error) {
             console.log("Error creating Koenigsegg!");
             console.log(error);
@@ -431,9 +431,108 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
             imageSeven: "exampleURL",
             imageEight: "exampleURL"
         });
-            console.log("Finished creating Lamborghini!");
+            console.log("Finished creating Lamborghini.");
         } catch (error) {
             console.log("Error creating Lamborghini!");
+            console.log(error);
+        }
+    };
+
+// Create Initial McLaren
+    async function createInitialMcLaren(){
+        console.log("Creating a McLaren :...");
+        try {
+            await createMcLaren({
+                make: "McLaren",
+                manufacturerId: 6,
+                model: "Senna",
+                year: 2020,
+                price: 2948595,
+                description: "Example of 2020 McLaren Senna",
+                mileage: 343,
+                bodyType: "Coupe",
+                vin: "D8EK2YF82MDUR8AJ2",
+                exteriorColor: "White",
+                interiorColor: "Black",
+                doors: 2,
+                imageOne: "exampleURL",
+                imageTwo: "exampleURL",
+                imageThree: "exampleURL",
+                imageFour: "exampleURL",
+                imageFive: "exampleURL",
+                imageSix: "exampleURL",
+                imageSeven: "exampleURL",
+                imageEight: "exampleURL"
+            });
+                console.log("Finished creating McLaren.");
+            } catch (error) {
+                console.log("Error creating McLaren!");
+                console.log(error);
+        }
+    };
+
+    // Create Initial Porsche 
+    async function createInitialPorsche(){
+        console.log("Creating a Porsche:...");
+        try {
+            await createPorsche({
+                make: "Porsche",
+                manufacturerId: 7,
+                model: "918 Spyder",
+                year: 2014,
+                price: 2249499,
+                description: "Example of 2014 Porsche 918 Spyder",
+                mileage: 918,
+                bodyType: "Convertible",
+                vin: "D8EK2YF82MDUR8AJ3",
+                exteriorColor: "Silver",
+                interiorColor: "Black",
+                doors: 2,
+                imageOne: "exampleURL",
+                imageTwo: "exampleURL",
+                imageThree: "exampleURL",
+                imageFour: "exampleURL",
+                imageFive: "exampleURL",
+                imageSix: "exampleURL",
+                imageSeven: "exampleURL",
+                imageEight: "exampleURL"
+            });
+            console.log("Finished creating Porsche.");
+        } catch (error) {
+            console.log("Error creating Porsche!");
+            console.log(error);
+        }
+    };
+
+    // Create Initial Rolls Royce 
+    async function createInitialRollsRoyce(){
+        console.log("Creating a Rolls Royce:...");
+        try {
+            await createRollsRoyce({
+                make: "Rolls Royce",
+                manufacturerId: 8,
+                model: "Wraith",
+                year: 2017,
+                price: 266489,
+                description: "Example of 2017 Rolls Royce Wraith",
+                mileage: 8489,
+                bodyType: "Coupe",
+                vin: "D8EK2YF82MDUR8AJ2",
+                exteriorColor: "White",
+                interiorColor: "White",
+                doors: 2,
+                imageOne: "exampleURL",
+                imageTwo: "exampleURL",
+                imageThree: "exampleURL",
+                imageFour: "exampleURL",
+                imageFive: "exampleURL",
+                imageSix: "exampleURL",
+                imageSeven: "exampleURL",
+                imageEight: "exampleURL"
+            });
+            console.log("Finished creating Rolls Royce.");
+        } catch (error) {
+            console.log("Error creating Rolls Royce!");
             console.log(error);
         }
     };
@@ -720,6 +819,156 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 console.log("Calling all LamborghiniInteriorColor...");
                 const lamborghiniInteriorColor = await getAllLamborghiniByInteriorColor("Black");
                 console.log("Results", lamborghiniInteriorColor);
+
+            // McLaren
+            console.log("Calling all McLaren...");
+            const mclaren = await getAllMcLaren();
+            console.log("Results", mclaren);
+
+                // GetByID
+                console.log("Calling all McLarenId...");
+                const mclarenId = await getAllMcLarenById(1);
+                console.log("Results", mclarenId);
+
+                // GetByMake
+                console.log("Calling all McLarenMake...");
+                const mclarenMake = await getAllMcLarenByMake("McLaren");
+                console.log("Results", mclarenMake);
+
+                // GetByModel
+                console.log("Calling all McLarenModel...");
+                const mcLarenModel = await getAllMcLarenByModel("Senna");
+                console.log("Results", mcLarenModel);
+
+                // GetByYear
+                console.log("Calling all McLarenYear...");
+                const mcLarenYear = await getAllMcLarenByYear(2020);
+                console.log("Results", mcLarenYear);
+
+                // GetByPrice
+                console.log("Calling all McLarenPrice...");
+                const mcLarenPrice = await getAllMcLarenByPrice(2948595);
+                console.log("Results", mcLarenPrice);
+
+                // GetByMileage
+                console.log("Calling all McLarenMileage...");
+                const mcLarenMileage = await getAllMcLarenByMileage(343);
+                console.log("Results", mcLarenMileage);
+
+                // GetByBodyType
+                console.log("Calling all McLarenBodyType...");
+                const mcLarenBodyType = await getAllMcLarenByBodyType("Coupe");
+                console.log("Results", mcLarenBodyType);
+
+                // GetByExteriorColor
+                console.log("Calling all McLarenExteriorColor...");
+                const mcLarenExteriorColor = await getAllMcLarenByExteriorColor("White");
+                console.log("Results", mcLarenExteriorColor);
+
+                // GetByInteriorColor
+                console.log("Calling all McLarenInteriorColor...");
+                const mcLarenInteriorColor = await getAllMcLarenByInteriorColor("Black");
+                console.log("Results", mcLarenInteriorColor);
+
+            // Porsche
+            console.log("Calling all Porsche...");
+            const porsche = await getAllPorsche();
+            console.log("Results", porsche);
+
+                // GetByID
+                console.log("Calling all PorscheId...");
+                const porscheId = await getAllPorscheById(1);
+                console.log("Results", porscheId);
+
+                // GetByMake
+                console.log("Calling all PorscheMake...");
+                const porscheMake = await getAllPorscheByMake("Porsche");
+                console.log("Results", porscheMake);
+
+                // GetByModel
+                console.log("Calling all PorscheModel...");
+                const porscheModel = await getAllPorscheByModel("918 Spyder");
+                console.log("Results", porscheModel);
+
+                // GetByYear
+                console.log("Calling all PorscheYear...");
+                const porscheYear = await getAllPorscheByYear(2014);
+                console.log("Results", porscheYear);
+
+                // GetByPrice
+                console.log("Calling all PorschePrice...");
+                const porschePrice = await getAllPorscheByPrice(2249499);
+                console.log("Results", porschePrice);
+
+                // GetByMileage
+                console.log("Calling all PorscheMileage...");
+                const porscheMileage = await getAllPorscheByMileage(918);
+                console.log("Results", porscheMileage);
+
+                // GetByBodyType
+                console.log("Calling all PorscheBodyType...");
+                const porscheBodyType = await getAllPorscheByBodyType("Convertible");
+                console.log("Results", porscheBodyType);
+
+                // GetByExteriorColor
+                console.log("Calling all PorscheExteriorColor...");
+                const porscheExteriorColor = await getAllPorscheByExteriorColor("Silver");
+                console.log("Results", porscheExteriorColor);
+
+                // GetByInteriorColor
+                console.log("Calling all PorscheInteriorColor...");
+                const porscheInteriorColor = await getAllPorscheByInteriorColor("Black");
+                console.log("Results", porscheInteriorColor);
+
+            // RollsRoyce
+            console.log("Calling all RollsRoyce...");
+            const rollsRoyce = await getAllRollsRoyce();
+            console.log("Results", rollsRoyce);
+
+                // GetByID
+                console.log("Calling all RollsRoyceId...");
+                const rollsRoyceId = await getAllRollsRoyceById(1);
+                console.log("Results", rollsRoyceId);
+
+                // GetByMake
+                console.log("Calling all RollsRoyceMake...");
+                const rollsRoyceMake = await getAllRollsRoyceByMake("Rolls Royce");
+                console.log("Results", rollsRoyceMake);
+
+                // GetByModel
+                console.log("Calling all RollsRoyceModel...");
+                const rollsRoyceModel = await getAllRollsRoyceByModel("Wraith");
+                console.log("Results", rollsRoyceModel);
+
+                // GetByYear
+                console.log("Calling all RollsRoyceYear...");
+                const rollsRoyceYear = await getAllRollsRoyceByYear(2017);
+                console.log("Results", rollsRoyceYear);
+
+                // GetByPrice
+                console.log("Calling all RollsRoycePrice...");
+                const rollsRoycePrice = await getAllRollsRoyceByPrice(266489);
+                console.log("Results", rollsRoycePrice);
+
+                // GetByMileage
+                console.log("Calling all RollsRoyceMileage...");
+                const rollsRoyceMileage = await getAllRollsRoyceByMileage(8489);
+                console.log("Results", rollsRoyceMileage);
+
+                // GetByBodyType
+                console.log("Calling all RollsRoyceBodyType...");
+                const rollsRoyceBodyType = await getAllRollsRoyceByBodyType("Coupe");
+                console.log("Results", rollsRoyceBodyType);
+
+                // GetByExteriorColor
+                console.log("Calling all RollsRoyceExteriorColor...");
+                const rollsRoyceExteriorColor = await getAllRollsRoyceByExteriorColor("White");
+                console.log("Results", rollsRoyceExteriorColor);
+
+                // GetByInteriorColor
+                console.log("Calling all RollsRoyceInteriorColor...");
+                const rollsRoyceInteriorColor = await getAllRollsRoyceByInteriorColor("White");
+                console.log("Results", rollsRoyceInteriorColor);
 
 
             console.log("Finished database tests.");

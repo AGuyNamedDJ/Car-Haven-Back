@@ -155,7 +155,7 @@ async function getAllRollsRoyceByInteriorColor (interiorColor) {
         WHERE "interiorColor"=$1;
         `, [interiorColor]);
 
-        return porschrollsroycee;
+        return rollsroyce;
     } catch (error) {
         console.log("Error getting rollsroyce by interiorColor!")
         console.log(error);
