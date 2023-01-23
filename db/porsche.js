@@ -146,7 +146,7 @@ async function getAllPorscheByExteriorColor (exteriorColor) {
     }
 };
 
-// getAllPorscheByBodyType
+// getAllPorscheByInteriorColor
 async function getAllPorscheByInteriorColor (interiorColor) {
     try{
         const { rows : [porsche ] } = await client.query(`

@@ -6,7 +6,7 @@ const { getAllManufacturer, getManufacturerById } = require('../db/manufacturer'
 const manufacturerRouter = express.Router();
 
 // Router Handlers
-    // GET/manufacturer
+    // GET /manufacturer
     manufacturerRouter.get("/", async (req, res, next) => {
         console.log("Handling GET /manufacturer");
         try {
@@ -20,7 +20,7 @@ const manufacturerRouter = express.Router();
           }
         });
     
-// GET/manufacturer/:manufacturerId
+// GET /manufacturer/:manufacturerId
 manufacturerRouter.get("/:manufacturerId", async (req, res, next) => {
     console.log("Handling GET /manufacturer/:manufacturerId");
     try {
@@ -30,7 +30,7 @@ manufacturerRouter.get("/:manufacturerId", async (req, res, next) => {
     } catch (error) {
         console.log(error)
     }
-})
+});
 
 // Exports
 module.exports = {manufacturerRouter}

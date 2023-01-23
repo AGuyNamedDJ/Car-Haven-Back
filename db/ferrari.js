@@ -146,7 +146,7 @@ async function getAllFerrariByExteriorColor (exteriorColor) {
     }
 };
 
-// getAllFerrariByBodyType
+// getAllFerrariByInteriorColor
 async function getAllFerrariByInteriorColor (interiorColor) {
     try{
         const { rows : [ferrari ] } = await client.query(`

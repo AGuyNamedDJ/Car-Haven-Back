@@ -146,7 +146,7 @@ async function getAllKoenigseggByExteriorColor (exteriorColor) {
     }
 };
 
-// getAllKoenigseggByBodyType
+// getAllKoenigseggByInteriorColor
 async function getAllKoenigseggByInteriorColor (interiorColor) {
     try{
         const { rows : [koenigsegg ] } = await client.query(`

@@ -146,7 +146,7 @@ async function getAllBugattiByExteriorColor (exteriorColor) {
     }
 };
 
-// getAllBugattiByBodyType
+// getAllBugattiByInteriorColor
 async function getAllBugattiByInteriorColor (interiorColor) {
     try{
         const { rows : [bugatti ] } = await client.query(`

@@ -146,7 +146,7 @@ async function getAllLamborghiniByExteriorColor (exteriorColor) {
     }
 };
 
-// getAllLamborghiniByBodyType
+// getAllLamborghiniByInteriorColor
 async function getAllLamborghiniByInteriorColor (interiorColor) {
     try{
         const { rows : [lamborghini ] } = await client.query(`

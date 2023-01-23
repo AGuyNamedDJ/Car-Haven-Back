@@ -146,7 +146,7 @@ async function getAllBentleyByExteriorColor (exteriorColor) {
     }
 };
 
-// getAllBentleyByBodyType
+// getAllBentleyByInteriorColor
 async function getAllBentleyByInteriorColor (interiorColor) {
     try{
         const { rows : [bentley ] } = await client.query(`

@@ -146,7 +146,7 @@ async function getAllRollsRoyceByExteriorColor (exteriorColor) {
     }
 };
 
-// getAllRollsRoyceByBodyType
+// getAllRollsRoyceByInteriorColor
 async function getAllRollsRoyceByInteriorColor (interiorColor) {
     try{
         const { rows : [rollsroyce ] } = await client.query(`

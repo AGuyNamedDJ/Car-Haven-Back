@@ -146,7 +146,7 @@ async function getAllMcLarenByExteriorColor (exteriorColor) {
     }
 };
 
-// getAllMcLarenByBodyType
+// getAllMcLarenByInteriorColor
 async function getAllMcLarenByInteriorColor (interiorColor) {
     try{
         const { rows : [mclaren ] } = await client.query(`
