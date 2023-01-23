@@ -15,12 +15,12 @@ app.use(morgan('dev'));
 app.use(cors());
 
 // Catch-all route handler
-// app.get("/", (req, res) => {
-//     res.send("Server is Running!")
-// });
+app.get("/", (req, res) => {
+    res.send("Server is Running!")
+});
 
 // Router Handelers
-// app.use('/api', apiRouter);
+app.use('./api', apiRouter)
 
 try {
     client.connect();
