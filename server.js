@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 // Router Handelers
-app.use('./api', apiRouter)
+app.use('/api', apiRouter)
 
 try {
     client.connect();
