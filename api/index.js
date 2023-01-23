@@ -10,7 +10,7 @@ const { ferrariRouter } = require("./ferrari");
 const { koenigseggRouter } = require("./koenigsegg");
 const { mclarenRouter } = require("./mclaren");
 const { porscheRouter } = require("./porsche");
-const { rollsRoyceRouter } = require("./rollsRoyce");
+const { rollsRoyceRouter } = require("./rollsroyce");
 
 apiRouter.use('/manufacturer', manufacturerRouter);
 apiRouter.use('/bentley', bentleyRouter);
