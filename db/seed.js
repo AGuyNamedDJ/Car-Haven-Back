@@ -908,23 +908,67 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
                 make: "Koenigsegg",
                 manufacturerId: 4,
                 model: "Regera",
-                year: 2016,
-                price: 4170000,
-                description: "Example of 2016 Koenigsegg Regera",
-                mileage: 26,
+                year: 2021,
+                price: 4018477,
+                description: "The Koenigsegg Regera is a limited-edition hybrid supercar that boasts a sleek and aerodynamic design. With a 5.0-liter V8 engine and three electric motors, this car is capable of producing a staggering 1,500 horsepower. The Regera has a top speed of 260 mph and can accelerate from 0-60 mph in just 2.5 seconds. The interior of the car is equally impressive, featuring leather upholstery, a 9-inch infotainment system, and advanced driver assistance systems. Only 80 units of the Regera were ever produced, making it a highly sought-after collector's item among car enthusiasts.",
+                mileage: 1058,
                 bodyType: "Coupe",
-                vin: "K3N1G5E8G3R4A5",
-                exteriorColor: "Orange",
-                interiorColor: "Black",
+                vin: "D5FG6N78SD6F7",
+                exteriorColor: "Black",
+                interiorColor: "White",
                 doors: 2,
-                imageOne: "exampleURL",
-                imageTwo: "exampleURL",
-                imageThree: "exampleURL",
-                imageFour: "exampleURL",
-                imageFive: "exampleURL",
-                imageSix: "exampleURL",
-                imageSeven: "exampleURL",
-                imageEight: "exampleURL"
+                imageOne: "https://img.jamesedition.com/listing_images/2022/12/14/13/12/08/a7fb5cfb-0a33-4622-bd0c-76540742f504/je/768xxsxm.jpg",
+                imageTwo: "https://img.jamesedition.com/listing_images/2022/12/14/13/12/08/c64ddec1-25ba-47df-bf41-a1c5d6701b6f/je/768xxsxm.jpg",
+                imageThree: "https://img.jamesedition.com/listing_images/2022/12/14/13/12/08/930e4c35-92fd-4e26-948e-3758d1c36282/je/768xxsxm.jpg",
+                imageFour: "https://img.jamesedition.com/listing_images/2022/12/14/13/12/08/fc8af07f-11db-4129-bd0f-aa6ff26840ea/je/768xxsxm.jpg",
+                imageFive: "https://img.jamesedition.com/listing_images/2022/12/14/13/12/08/49e95640-3238-4968-90b4-5c5e9b6303db/je/768xxsxm.jpg",
+                imageSix: "https://img.jamesedition.com/listing_images/2022/12/14/13/12/08/6339491d-7a31-4429-8bdc-0a471f42ba9c/je/768xxsxm.jpg",
+                imageSeven: "https://img.jamesedition.com/listing_images/2022/12/14/13/12/08/49e95640-3238-4968-90b4-5c5e9b6303db/je/768xxsxm.jpg",
+                imageEight: "https://img.jamesedition.com/listing_images/2022/12/14/13/12/08/086fae01-002c-4183-b26b-3da781bdfc33/je/768xxsxm.jpg"
+            });
+            await createKoenigsegg({
+                make: "Koenigsegg",
+                manufacturerId: 4,
+                model: "Agera R",
+                year: 2014,
+                price: 3456649,
+                description: "The Koenigsegg Agera R is a limited-edition supercar that boasts a powerful 5.0-liter V8 engine producing 1,140 horsepower and 811 lb-ft of torque. The car is built with a lightweight carbon fiber body and features active suspension, active aerodynamics, and advanced electronic stability control. With a top speed of over 260 mph, the Agera R is one of the fastest production cars in the world. It also features advanced interior features such as 9 inch touchscreen display, active sound cancellation, and a full leather interior. This exclusive car is sure to turn heads on the road and is a must-have for any car enthusiast.",
+                mileage: 11644,
+                bodyType: "Coupe",
+                vin: "JH5G6K6J7H",
+                exteriorColor: "Black",
+                interiorColor: "White",
+                doors: 2,
+                imageOne: "https://img.jamesedition.com/listing_images/2022/09/23/14/26/24/f74f4507-6b09-4ed3-8474-527498e3121f/je/768xxsxm.jpg",
+                imageTwo: "https://img.jamesedition.com/listing_images/2022/09/23/14/26/24/e5579e97-6c4c-4f73-bf4e-382657c5c1fa/je/768xxsxm.jpg",
+                imageThree: "https://img.jamesedition.com/listing_images/2022/09/23/14/26/24/b4d48ad1-9330-45e1-aa26-7a8fd14a0cfb/je/768xxsxm.jpg",
+                imageFour: "https://img.jamesedition.com/listing_images/2022/09/23/14/26/24/7d5ae65c-3465-4b17-a260-2c96bc52a280/je/768xxsxm.jpg",
+                imageFive: "https://img.jamesedition.com/listing_images/2022/09/23/14/26/25/f8513d1c-b391-4977-a6b7-9682ab840d0c/je/768xxsxm.jpg",
+                imageSix: "https://img.jamesedition.com/listing_images/2022/09/23/14/26/25/9d66cd50-9d00-49b1-87cc-c2ed6594f0af/je/768xxsxm.jpg",
+                imageSeven: "https://img.jamesedition.com/listing_images/2022/09/23/14/26/24/02e6a63c-46bd-4eb9-abea-adda72977d5c/je/768xxsxm.jpg",
+                imageEight: "https://img.jamesedition.com/listing_images/2022/09/23/14/26/24/ee57a4f7-3508-4310-8e70-c39607aeae33/je/768xxsxm.jpg"
+            });
+            await createKoenigsegg({
+                make: "Koenigsegg",
+                manufacturerId: 4,
+                model: "Gemera",
+                year: 2023,
+                price: 1735494,
+                description: "The Koenigsegg Gemera is a hybrid supercar that boasts a 4-seater, 4-door configuration and cutting-edge technology. The car is powered by a 2.0-liter, 3-cylinder engine that is combined with three electric motors, resulting in a total output of 1,700 horsepower and 2,581 lb-ft of torque. The powertrain is paired with a 9-speed, direct-drive transmission and all-wheel drive, allowing for a 0-60 mph acceleration time of just 1.9 seconds and a top speed of 250 mph.  The exterior of the Gemera features a sleek and aerodynamic design, with a low-slung stance, a wide stance, and a distinct front fascia. The car sits on large, lightweight wheels and is finished in a range of vibrant colors. The interior of the car is equally impressive, with a spacious and luxurious cabin that is trimmed in high-quality materials and features a range of advanced technologies and amenities.  The Koenigsegg Gemera is an exclusive and highly sought-after supercar that offers a unique combination of performance, luxury, and technology. It is a perfect choice for those who want to experience the ultimate in automotive engineering and design.",
+                mileage: 0,
+                bodyType: "Coupe",
+                vin: "HG56F7H7J6K5",
+                exteriorColor: "Grey",
+                interiorColor: "Orange",
+                doors: 2,
+                imageOne: "https://img.jamesedition.com/listing_images/2022/06/06/16/27/52/2187e3a0-8f1c-4749-8ec9-87b7cd9d2780/je/768xxsxm.jpg",
+                imageTwo: "https://img.jamesedition.com/listing_images/2022/06/06/16/27/52/0cfc39ad-6ad7-499d-89b0-887e141ea365/je/768xxsxm.jpg",
+                imageThree: "https://img.jamesedition.com/listing_images/2022/06/06/16/27/52/a00327e8-7817-4d21-9f84-9c51ca58f2b7/je/768xxsxm.jpg",
+                imageFour: "https://img.jamesedition.com/listing_images/2022/06/06/16/27/52/be582280-167a-48da-bb9d-5395de049586/je/768xxsxm.jpg",
+                imageFive: "https://img.jamesedition.com/listing_images/2022/06/06/16/27/52/464777ad-e6e9-40ff-aa57-dd467bad5a3d/je/768xxsxm.jpg",
+                imageSix: "https://img.jamesedition.com/listing_images/2022/06/06/16/27/52/c256780c-c502-439b-8ffe-e9047bde32bf/je/768xxsxm.jpg",
+                imageSeven: "https://img.jamesedition.com/listing_images/2022/06/06/16/27/52/d3dc9e66-d88b-4a5f-aba2-6e71b0d19201/je/768xxsxm.jpg",
+                imageEight: "https://img.jamesedition.com/listing_images/2022/06/06/16/27/52/9877ccff-3fd1-4610-a2be-a93bb5d4eac0/je/768xxsxm.jpg"
             });
             console.log("Finished creating Koenigsegg.");
         } catch (error) {
@@ -1199,9 +1243,9 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
             //     console.log("Results", bugattiInteriorColor);
 
             // // Ferrari
-            console.log("Calling all Ferrari...");
-            const ferrari = await getAllFerrari();
-            console.log("Results", ferrari);
+            // console.log("Calling all Ferrari...");
+            // const ferrari = await getAllFerrari();
+            // console.log("Results", ferrari);
 
             //     // GetByID
             //     console.log("Calling all FerrariId...");
