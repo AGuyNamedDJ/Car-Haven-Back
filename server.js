@@ -21,6 +21,7 @@ app.get("/", (req, res) => {
 
 // Router Handelers
 app.use('/api', apiRouter)
+    // there should be no ./ here
 
 try {
     client.connect();
