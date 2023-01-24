@@ -2289,9 +2289,9 @@ const { createRollsRoyce, getAllRollsRoyce, getAllRollsRoyceById, getAllRollsRoy
             //     console.log("Results", koenigseggInteriorColor);
 
             // // Lamborghini
-            // console.log("Calling all Lamborghini...");
-            // const lamborghini = await getAllLamborghini();
-            // console.log("Results", lamborghini);
+            console.log("Calling all Lamborghini...");
+            const lamborghini = await getAllLamborghini();
+            console.log("Results", lamborghini);
 
             //     // GetByID
             //     console.log("Calling all LamborghiniId...");
